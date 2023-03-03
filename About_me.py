@@ -39,22 +39,22 @@ import streamlit_echarts
 from pyecharts.charts import Bar,Grid
 
 
-tab1, tab2, tab3,tab4= st.tabs(["个人简介", "自动化报表(R/PYTHON + EXCEL/PPT)","数据模型", "系统设计"])
+tab1, tab2, tab3,tab4= st.tabs(["个人简介", "自动化报表","数据模型", "系统设计"])
 with tab1:
     st.markdown('#### <font color=#016169>基本信息</font>',unsafe_allow_html=True)
     col1, col2,col3, col4, col5= st.columns([3,4,3,3,3])
     with col1:
-        st.markdown('##### :telephone_receiver: 13690646481')
+        st.markdown('###### :telephone_receiver: 13690646481')
         #st.markdown('#### :telephone_receiver: <font color=#016169>13690646481</font>',unsafe_allow_html=True)
     with col2: 
-        st.markdown('##### :e-mail:809251311@qq.com')  
+        st.markdown('###### :e-mail:809251311@qq.com')  
        
     with col3:
-        st.markdown('##### :mortar_board:暨南大学')
+        st.markdown('###### :mortar_board:暨南大学')
     with col4:   
-        st.markdown('##### :book:经济统计学')
+        st.markdown('###### :book:经济统计学')
     with col5:   
-        st.markdown('##### :round_pushpin:广东 佛山')    
+        st.markdown('###### :round_pushpin:广东 佛山')    
         
         
 
@@ -81,7 +81,7 @@ with tab1:
             
             .set_series_opts(label_opts=opts.LabelOpts(color="#016169",font_weight="bold",position="right"))
             .set_global_opts(
-                yaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(font_size=15,color="#016169",font_weight="bold")),
+                yaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(font_size=10,color="#016169",font_weight="bold")),
                 
                 xaxis_opts=opts.AxisOpts(axislabel_opts=opts.LabelOpts(is_show= False)),
                 # title_opts=opts.TitleOpts(
@@ -95,10 +95,10 @@ with tab1:
         )
         
         grid=Grid()
-        grid.add(skillbar,grid_opts=opts.GridOpts(pos_left='25%',pos_top='8%',pos_bottom='0%'))
+        grid.add(skillbar,grid_opts=opts.GridOpts(pos_left='30%',pos_top='8%',pos_bottom='0%'))
         
         streamlit_echarts.st_pyecharts(
-            grid,width='600px',height="125px",
+            grid,height="125px",
             theme=ThemeType.VINTAGE
         )
         
@@ -108,6 +108,7 @@ with tab1:
     st.markdown('###### 2017-2018 暨南大学优秀学生奖学金×2',unsafe_allow_html=True)
     
 with tab2:
+   st.markdown('####  R/PYTHON + EXCEL/PPT')
    col1, col2,col3= st.columns(3)
    with col1:
        st.markdown('#####  <font color=#016169>周度行情数据</font>',unsafe_allow_html=True)
@@ -175,7 +176,7 @@ with tab2:
 with tab3:
    col1, col2= st.columns(2)
    with col1:
-       st.write('价格对比模型')
+       st.markdown('#####  <font color=#016169>价格对比模型</font>',unsafe_allow_html=True)
        image = './pages/价格对比模型.jpg'
        st.image(image, caption='')
        st.markdown("""
@@ -184,8 +185,8 @@ with tab3:
                     """,unsafe_allow_html=True)
                     
 
-   with col2:   
-       st.write('条件计价模型')
+   with col2:  
+       st.markdown('#####  <font color=#016169>条件计价模型</font>',unsafe_allow_html=True)
        image = 'pages/条件计价模型.png'
        st.image(image, caption='')
        st.markdown("""
@@ -197,10 +198,12 @@ with tab3:
 
 
 with tab4:
+    st.markdown("""######  流程管理、需求文档、测试、优化 (Endraw + AxureRP9)""")
+    st.markdown("""######  对接信息部同事提起功能需求、日常bug反馈处理及优化方案""")
     
     st.markdown("""
-                #####  <font color=#016169>报价系统</font>
-                ###### 梳理定制化产品报价逻辑并转化为公式、优化合同模板（电子章电子签名）、建立合同审批、修改、取消流程，对接信息部同事提起功能需求、日常bug反馈处理及优化方案\n
+                #####  <font color=#016169>*报价系统</font>
+                ###### 梳理定制化产品报价逻辑并转化为公式、优化合同模板（电子章电子签名）、建立合同审批、修改、取消流程\n
                """,unsafe_allow_html=True)
     st.markdown("""           
                 模块包括：每日基价、现货库存、定制产品报价、购物车、地址管理、合同列表
@@ -209,8 +212,8 @@ with tab4:
     st.markdown("---")
         
     st.markdown("""
-                #####  <font color=#016169>供应链系统</font>
-                ###### 梳理供应链各岗位作业表格、单据凭证、字段对应关系、数据流动方向及单据审批流程，对接信息部同事提起功能需求、日常bug反馈处理及优化方案\n
+                #####  <font color=#016169>*供应链系统</font>
+                ###### 梳理供应链各岗位作业表格、单据凭证、字段对应关系、数据流动方向及单据审批流程\n
                 """,unsafe_allow_html=True)
     st.markdown("""            
                 模块包括：销售订单、采购订单、采购报货明细、库存管理（调仓、转货）、
