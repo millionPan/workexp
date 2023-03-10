@@ -5,8 +5,7 @@ Created on Tue Feb 21 15:50:28 2023
 @author: Administrator
 """
 
-import streamlit as st
-import streamlit.components.v1 as components 
+import streamlit as st 
 
 #import streamlit.components.v1 as components
 # from pyecharts.charts import *
@@ -115,7 +114,7 @@ with tab2:
        image = './pages/周度行情数据.png'
        st.image(image,caption='')
        st.markdown("""
-                   每周定期从网页**采集数据**（运价指数、汇率、镍价、铁矿石、铬铁价、各牌号不锈钢价格及社会库存），
+                   每周定期从网页**采集行业数据**（运价指数、汇率、镍价、铁矿石、铬铁价、各牌号不锈钢价格及社会库存），
                    自动编制图表并**输出PPT和图片**，以便把握行业波动，为公司**制定采购和销售策略**提供数据支持
                    """,unsafe_allow_html=True)
        
@@ -198,31 +197,41 @@ with tab3:
 
 
 with tab4:
-    st.markdown("""######  流程管理、需求文档、测试、优化 (Endraw + AxureRP9)""")
-    st.markdown("""######  对接信息部同事提起功能需求、日常bug反馈处理及优化方案""")
-    
-    st.markdown("""
-                #####  <font color=#016169>*报价系统</font>
-                ###### 梳理定制化产品报价逻辑并转化为公式、优化合同模板（电子章电子签名）、建立合同审批、修改、取消流程\n
-               """,unsafe_allow_html=True)
-    st.markdown("""           
-                模块包括：每日基价、现货库存、定制产品报价、购物车、地址管理、合同列表
-                """,unsafe_allow_html=True)
-    
-    st.markdown("---")
+    col1, col2= st.columns(2)
+    with col1:
+        st.markdown("""#####  流程管理、需求文档、测试、优化 (Endraw + AxureRP9)""")
+        st.markdown("""#####  对接信息部同事提起功能需求、日常bug反馈处理及优化方案""")
         
-    st.markdown("""
-                #####  <font color=#016169>*供应链系统</font>
-                ###### 梳理供应链各岗位作业表格、单据凭证、字段对应关系、数据流动方向及单据审批流程\n
-                """,unsafe_allow_html=True)
-    st.markdown("""            
-                模块包括：销售订单、采购订单、采购报货明细、库存管理（调仓、转货）、
-                        配货、排产（排产模型：自动生成工序描述）、成品验收、交货管理、客诉管理（采购+销售）、
-                        支出申请、财务收款单、款项分配、财务应收应付报表
-                
-                """,unsafe_allow_html=True)
+        st.markdown("""
+                    #####  <font color=#016169>*报价系统</font>
+                    ###### 项目描述：公司对接客户的阵地，提高报价效率和客户体验，为供应链提供统一订单数据
+                    
+                   """,unsafe_allow_html=True)
+        st.markdown("""  
+                    完成4版H5/小程序重构、上线、维护、迭代\n
+                    + 负责工作：梳理定制化产品报价逻辑并转化为公式、优化合同模板（电子章电子签名）、建立合同审批、修改、取消流程\n
+                    + 模块包括：每日基价、现货库存、定制产品报价、购物车、地址管理、合同列表
+                    """,unsafe_allow_html=True)
+        
+        st.markdown("---")
+            
+        st.markdown("""
+                    #####  <font color=#016169>*供应链系统</font>
+                    ###### 项目描述：公司内部高效运转的关键，自动生成凭证单据，形成岗位之间数据流转闭环
+                    
+                    """,unsafe_allow_html=True)
+        st.markdown("""  
+                    7个月完成33个界面上线\n
+                    + 负责工作：梳理供应链各岗位作业表格、单据凭证、字段对应关系、数据流动方向、单据审批流程及开发进度跟进\n
+                    + 模块包括：销售订单、采购订单、采购报货明细、库存管理（调仓、转货）、
+                            配货、排产（排产模型：自动生成工序描述）、成品验收、交货管理、客诉管理（采购+销售）、
+                            支出申请、财务收款单、款项分配、财务应收应付报表
+                    
+                    """,unsafe_allow_html=True)
 
-
+    with col2:
+        image = 'pages/供应链系统.png'
+        st.image(image, caption='')
 
 
      
