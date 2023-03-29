@@ -23,7 +23,7 @@ st.set_page_config(
 
 
 ###标题
-st.markdown('## <font color=#016169>PAN</font>',unsafe_allow_html=True)
+st.markdown('### <font color=#016169>潘兆欣</font>',unsafe_allow_html=True)
 
 
 
@@ -64,10 +64,11 @@ with tab1:
     col1, col2= st.columns([6,5])
     with col1:
         st.markdown("""
-        + 七年使用R语言数据采集、清洗、分析经验（datatable、管道操作、读写Excel/PPT、爬虫）
-        + 熟练使用办公软件：Excel（公式、数据透视表）、PPT、Word
-        + 微信公众平台管理、内容编辑、发送推文
-        + 通过CET-6，具有良好的英语阅读能力""")
+        +  熟练使用办公软件：Excel（公式、数据透视表）、PPT、Word
+        +  熟练掌握R、PYTHON：连接数据库、自动化报表、网页爬虫、echarts
+        +  能用Endraw、AxureRP9梳理流程图、绘制系统开发界面图
+        +  微信公众平台管理、内容编辑、发送推文
+        +  通过CET-6，具有良好的英语阅读能力""")
  
     with col2:
         l1=['Endraw','AxureRP9','PPT','PYTHON','R','EXCEL']
@@ -230,8 +231,12 @@ with tab4:
                     """,unsafe_allow_html=True)
 
     with col2:
+        image = 'pages/采购订单明细界面设计图.png'
+        st.image(image, caption='基于Antdesign的采购订单明细界面设计图')
+        
+        st.markdown("---")
         image = 'pages/供应链系统.png'
-        st.image(image, caption='')
+        st.image(image, caption='系统架构图')
 
 
      
