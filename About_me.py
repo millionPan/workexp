@@ -229,12 +229,13 @@ with tab4:
                             支出申请、财务收款单、款项分配、财务应收应付报表
                     
                     """,unsafe_allow_html=True)
+                    
+        st.markdown("---")
 
     with col2:
-        image = 'pages/采购订单明细界面设计图.png'
-        st.image(image, caption='基于Antdesign的采购订单明细界面设计图')
+        image = 'pages/报货明细界面设计图.png'
+        st.image(image, caption='基于Antdesign的报货明细界面设计图')
         
-        st.markdown("---")
         image = 'pages/供应链系统.png'
         st.image(image, caption='系统架构图')
 
